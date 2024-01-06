@@ -21,7 +21,7 @@ syn match   HyprQuotedString '"[^"]\+"' contained
 syn cluster HyprString contains=HyprSimpleString,HyprQuotedString
 
 " Settings
-syn keyword Block input general animations decoration gestures misc dwindle master plugin binds group
+syn keyword Block input general animations decoration gestures misc dwindle master plugin binds group xwayland
 syn region OptBlock start="{" end="}" fold transparent display contains=HyprVar,Value,OptBlock,Num,Str,HyprComment,Disp,ShellVar
 syn match HyprVar '\s[a-z _ .]\+ ' skipwhite contained display nextgroup=Symbol
 syn region Value start="=" end="$\|," transparent display contains=Str,Num,Logical,ShellVar,Path,HyprComment,Disp,Dispatchers
