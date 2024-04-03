@@ -8,15 +8,15 @@ if exists("b:current_syntax")
 endif
 
 " Strings
-syn match	Path "\(\.\|\~\)\/.*" display
+syn match	Path "^(/[^/ ]*)+/?$" display
 syn match	Symbol "=" skipwhite display nextgroup=Value
 syn match	Str "[a-zA-Z _ .-\"\'?]\+$" contained display
 syn match	Num "\d\+\(\.\d\+\)\?" contained display
 syn match	Num "e[+-]\d\+" contained display
 syn match	Num "[+-]\d\+\(\.\d\+\)\?" contained display
-syn match	ShellVar "\$\w\+#" contained display contains=HyprComment
+syn match	ShellVar "\$\w\+" contained display
 syn keyword	Logical on off true false no yes contained display
-syn region  HyprSimpleString keepend start='[^ \t]' end='$\|#' contained contains=HyprVar
+syn region  HyprSimpleString keepend start='[^ \t]' end='$\|#' contained contains=HyprVar,HyprComment
 syn match   HyprQuotedString '"[^"]\+"' contained
 syn cluster HyprString contains=HyprSimpleString,HyprQuotedString
 
