@@ -14,7 +14,7 @@ syn match	Str "[a-zA-Z _ .-\"\'?]\+$" contained display
 syn match	Num "\d\+\(\.\d\+\)\?" contained display
 syn match	Num "e[+-]\d\+" contained display
 syn match	Num "[+-]\d\+\(\.\d\+\)\?" contained display
-syn match	ShellVar "\$\w\+" contained display
+syn match	ShellVar "\$\w\+" contained display contains=HyprComment
 syn keyword	Logical on off true false no yes contained display
 syn region  HyprSimpleString keepend start='[^ \t]' end='$\|#' contained contains=HyprVar,HyprComment
 syn match   HyprQuotedString '"[^"]\+"' contained
