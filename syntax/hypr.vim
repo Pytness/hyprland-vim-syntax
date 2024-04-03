@@ -8,7 +8,7 @@ if exists("b:current_syntax")
 endif
 
 " Strings
-syn match	Path "\(\.\|\~\)\/.*" display
+syn match	Path "\(/[^/ ]*\)\+/\?" display
 syn match	Symbol "=" skipwhite display nextgroup=Value
 syn match	Str "[a-zA-Z _ .-\"\'?]\+$" contained display
 syn match	Num "\d\+\(\.\d\+\)\?" contained display
