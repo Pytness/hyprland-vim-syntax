@@ -31,7 +31,7 @@ syn match N ', [a-zA-Z][a-zA-Z0-9 _.]\+,' contained skipwhite
 " Commands
 syn region Command start='^[a-zA-Z][a-zA-Z_. -]\+ =' end='$' skipwhite transparent contains=HyprKeyModifier,ShellVar,HyprConfigCommand,Dispatchers,HyprComment,Str,Disp,Path,Num
 syn keyword HyprKeyModifier SUPER SHIFT CTRL ALT Mod1 Mod2 Mod3 Mod4 Mod5 Mode_switch nextgroup=N
-syn keyword HyprConfigCommand bind bindl bindr bindel bindm monitor source windowrule nextgroup=Symbol contained
+syn keyword HyprConfigCommand bind bindl bindr binde bindel bindm monitor source windowrule nextgroup=Symbol contained
 
 " Comments
 syn keyword HyprTodo contained TODO FIXME XXX NOTE
